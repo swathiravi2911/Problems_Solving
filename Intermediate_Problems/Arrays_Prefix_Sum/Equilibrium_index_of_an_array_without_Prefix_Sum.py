@@ -30,9 +30,10 @@ class Solution:
         
         # initialize leftsum = 0
         leftsum = 0
+        rightsum = sum
         for i in range(len(A)):
-            sum = sum - A[i]
-            if leftsum == sum:
+            rightsum = rightsum - A[i]
+            if leftsum == rightsum:
                 return i
             # update left sum for next iteration
             leftsum = leftsum + A[i]
